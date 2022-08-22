@@ -1,0 +1,14 @@
+#!/bin/bash
+# launches newsboat with custom config file and url file
+if ! command -v newsboat &> /dev/null
+then
+    echo ""
+    echo ""
+    echo "newsboat not found, please install"
+    echo ""
+    echo "ex: $ sudo snap install newsboat"
+    echo ""
+    exit
+else
+    newsboat -u urls -c data/main-cache.db -C config
+fi

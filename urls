@@ -1,0 +1,205 @@
+"query:ALL:age < \"100000\""
+"query:Apache:tags # \"apache\""
+"query:Big Data:tags # \"bigdata\""
+"query:Books:tags # \"books\""
+"query:CICD:tags # \"cicd\""
+"query:Clouds:tags # \"clouds\""
+"query:Containers:tags # \"containers\""
+"query:Configuraton Management:tags # \"configurationmanagement\""
+"query:Hardware:tags # \"hardware\""
+"query:Infrastructure Provisioning:tags # \"infrastructureprovisioning\""
+"query:iot:tags # \"iot\""
+"query:News:tags # \"news\""
+"query:Monitoring and Logging:tags # \"monitoringandlogging\""
+"query:Python:tags # \"python\""
+"query:R Programming:tags # \"rprog\""
+"query:Security:tags # \"security\""
+"query:Server Administration:tags # \"serveradministration\""
+"query:Databases:tags # \"databases\""
+#
+# APACHE
+#
+https://airflow.apache.org/blog/index.xml ! "apache"
+https://feeds.buzzsprout.com/186154.rss "~Confluent Apache Kafka Podcast" ! "apache"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSXwxpWZQ7XZ1WL3wqevChA "~Apache Airflow YouTube" ! "apache"
+#
+# BIG DATA
+#
+https://www.youtube.com/feeds/videos.xml?channel_id=UCs10x-muRrTQMJ4Ya-fmIlw "~Snowflake YouTube" ! "bigdata"
+https://www.qlik.com/blog/blog/rss ! "bigdata"
+https://www.smartdatacollective.com/feed/ ! "bigdata"
+https://insidebigdata.com/feed/ ! "bigdata"
+https://databricks.com/feed ! "bigdata"
+https://aws.amazon.com/blogs/big-data/feed/ ! "bigdata"
+https://analytixon.com/feed/ ! "bigdata"
+
+#
+# BOOKS
+#
+https://feeds.feedburner.com/oreilly/radar/atom ! "books"
+https://feeds.feedburner.com/oreilly/newbooks ! "books"
+https://feeds.feedburner.com/oreilly/all ! "books"
+#
+# CICD
+#
+https://about.gitlab.com/atom.xml ! "cicd"
+https://github.blog/feed/ ! "cicd"
+#
+# CLOUDS
+#
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDQ9L4eFHxSh0BM6z-SkZMw "~Ned in the Cloud" ! "clouds"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGWZY-0pONnKmF98dhZy9CQ "~Stephane Maarek YouTube" ! "clouds"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJS9pqu9BzkAMNTmzNMNhvg "~Google Cloud Tech YouTube" ! "clouds"
+https://aws.amazon.com/blogs/devops/feed/ ! "clouds"
+https://blog.cloudflare.com/rss/ ! "clouds"
+https://www.youtube.com/feeds/videos.xml?user=AWSwebinars ! "clouds"
+https://cloudblog.withgoogle.com/products/devops-sre/rss "~Google DevOps & SRE Blog" ! "clouds"
+https://devblogs.microsoft.com/landingpage/ ! "clouds"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYg157Qy_U7ZR1WUHTq0Q8Q "~AWS Containers from the Couch - YouTube" ! "clouds"
+https://aws.amazon.com/about-aws/whats-new/recent/feed/ ! "clouds"
+https://www.lastweekinaws.com/feed/ ! "clouds"
+#
+# CONFIGURATION MANAGEMENT
+#
+https://www.ansible.com/blog/rss.xml ! "configurationmanagement"
+#
+# CONTAINERS
+#
+http://forums.rancher.com/c/announcements.rss ! "containers"
+https://kubernetes.io/feed.xml ! "containers"
+http://forums.rancher.com/c/application-platform.rss ! "containers"
+http://forums.rancher.com/c/general.rss ! "containers"
+#
+# DATABASES
+#
+https://www.sqlservercentral.com/blogs/feed ! "databases"
+https://blog.sqlauthority.com/feed/ ! "databases"
+https://www.sqlshack.com/feed/ ! "databases"
+https://www.brentozar.com/blog/feed/ ! "databases"
+https://glennsqlperformance.com/feed/ ! "databases"
+https://redis.com/feed/ ! "databases"
+https://www.databasejournal.com/feed/ ! "databases"
+https://blogs.oracle.com/database/rss ! "databases"
+https://planet.mysql.com/rss20.xml ! "databases"
+https://aws.amazon.com/blogs/database/feed/ ! "databases"
+https://www.mongodb.com/blog/rss ! "databases"
+https://www.teradata.com/rss/Blogs ! "databases"
+https://azurecomcdn.azureedge.net/en-us/blog/topics/database/feed/ ! "databases"
+https://mariadb.com/feed/ ! "databases"
+#
+# HARDWARE
+#
+https://www.youtube.com/feeds/videos.xml?user=ServeTheHomeVideo ! "hardware"
+https://www.youtube.com/feeds/videos.xml?user=Mretaprime ! "hardware"
+#
+# INFRASTRUCTURE PROVISIONING
+#
+https://www.pulumi.com/blog/rss.xml ! "infrastructureprovisioning"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-AdvAxaagE9W2f0webyNUQ "~HashiCorp YouTube" ! "infrastructureprovisioning"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2Dhyn4Ev52YSbcpfnfP0Mw "~Pulumi YouTube" ! "infrastructureprovisioning"
+https://www.hashicorp.com/blog/products/terraform/feed.xml ! "infrastructureprovisioning"
+#
+# IOT
+#
+https://www.lfedge.org/feed/ ! "iot"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFNoGF7Ea-FfmAjfK4ReFpA "~IBM  Internet of Things" ! "iot"
+#
+# NEWS
+#
+# https://medium.com/feed/faun ! "news"
+https://faun.pub/feed ! "news"
+https://www.cncf.io/blog/feed/ ! "news"
+https://www.cncf.io/feed/ ! "news"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwFpzG5MK5Shg_ncAhrgr9g "~Awesome Open Source YouTube" ! "news"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCZUyPT9DkJWmS_DzdOi7RIA "~Caleb Curry YouTube" ! "news"
+https://www.youtube.com/feeds/videos.xml?user=mcgilluniversity ! "news"
+https://www.youtube.com/feeds/videos.xml?user=MITNewsOffice ! "news"
+https://newatlas.com/computers/index.rss "~New Atlas - Tech - Computers" ! "news"
+https://www.youtube.com/feeds/videos.xml?user=NOVAonline ! "news"
+https://www.youtube.com/feeds/videos.xml?user=RiceUniversity ! "news"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoOq-DtESvayx5yJE5H6-qQ "~Thetips4you Youtube" ! "news"
+https://www.youtube.com/feeds/videos.xml?user=explainingcomputers ! "news"
+https://www.youtube.com/feeds/videos.xml?user=ExplainingTheFuture ! "news"
+https://www.youtube.com/feeds/videos.xml?user=geerlingguy ! "news"
+https://dev.to/feed/ ! "news"
+https://portal2portal.blogspot.com/feeds/posts/default "~A Portal to a Portal" ! "news"
+https://news.ycombinator.com/rss ! "news"
+https://softwareengineeringdaily.com/feed/podcast/ ! "news"
+https://stackoverflow.blog/feed ! "news"
+https://www.jeffgeerling.com/blog.xml ! "news"
+https://www.linuxfoundation.org/feed/ ! "news"
+https://www.redhat.com/en/rss/blog/channel/devops-and-devsecops "~Red Hat DevOps & DevSecOps Blog" ! "news"
+https://www.redhat.com/en/rss/blog/channel/digital-transformation "~Red Hat Digital Transformation Blog" ! "news"
+https://www.redhat.com/en/rss/blog/channel/management-and-automation "~Red Hat Management & Automation Blog" ! "news"
+https://www.redhat.com/en/rss/blog/channel/red-hat-news "~Red Hat News Blog" ! "news"
+https://www.theregister.co.uk/devops/headlines.atom ! "news"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ "~FreeCodeCamp.org" ! "news"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCcuy916j4jPX-W-bhjXh_cg "~Abstract programmer YouTube" ! "news"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCdngmbVKX1Tgre699-XLlUA "~TechWorld with Nana" ! "news"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFe9-V_rN9nLqVNiI8Yof3w "~That DevOps Guy" ! "news"
+#
+# NIST
+#
+https://www.nist.gov/news-events/Advanced%20communications/rss.xml ! "nist"
+https://www.nist.gov/news-events/cybersecurity/rss.xml ! "nist"
+
+#
+# MONITORING AND LOGGING
+#
+https://www.youtube.com/feeds/videos.xml?channel_id=UCG5B6oQWWsIt-yO826IwG2Q "~Splunk YouTube" ! "monitoringandlogging"
+https://feeds.feedburner.com/prometheus/blog ! "monitoringandlogging"
+https://www.splunk.com/blog/feed/ ! "monitoringandlogging"
+https://grafana.com/blog/index.xml ! "monitoringandlogging"
+https://investors.splunk.com/rss/news-releases.xml ! "monitoringandlogging"
+https://www.datadoghq.com/blog/engineering/index.xml "~DataDog Engineering Blog" ! "monitoringandlogging"
+https://www.datadoghq.com/blog/index.xml "~DataDog Monitor Blog" ! "monitoringandlogging"
+https://www.dataengineeringpodcast.com/feed/mp3/ ! "monitoringandlogging"
+https://www.dynatrace.com/news/category/devops/feed/ ! "monitoringandlogging"
+https://www.dynatrace.com/news/feed/ ! "monitoringandlogging"
+https://www.fluentd.org/blog/feed.rss ! "monitoringandlogging"
+#
+# PYTHON
+#
+http://feeds.feedburner.com/PythonInsider ! "python"
+https://planetpython.org/rss20.xml ! "python"
+https://realpython.com/atom.xml?format=xml ! "python"
+https://feeds.feedburner.com/PythonSoftwareFoundationNews ! "python"
+https://blog.finxter.com/feed/ ! "python"
+https://blog.jetbrains.com/pycharm/feed/ ! "python"
+https://planet.scipy.org/feed.xml ! "python"
+#
+# R Programming
+#
+https://www.r-bloggers.com/feed/ ! "rprog"
+https://www.rstudio.com/blog/index.xml ! "rprog"
+https://rweekly.org/atom.xml ! "rprog"
+https://ropensci.org/blog/index.xml ! "rprog"
+https://blog.r-project.org/index.xml ! "rprog"
+#
+# SECURITY
+#
+https://www.youtube.com/feeds/videos.xml?channel_id=UCKILJTZISRLxQmiUgwg94Hw "~S12 Offensive Security" ! "security"
+https://www.cisa.gov/uscert/ncas/all.xml ! "security"
+https://www.cisa.gov/uscert/ncas/bulletins.xml ! "security"
+https://www.cisa.gov/uscert/ncas/current-activity.xml ! "security"
+https://www.cisa.gov/uscert/ncas/alerts.xml ! "security"
+https://www.cisa.gov/uscert/ics/alerts/alerts.xml ! "security"
+https://www.cisa.gov/uscert/ics/advisories/advisories.xml ! "security"
+https://www.cisa.gov/uscert/ics/announcements/announcements.xml ! "security"
+https://www.cisa.gov/uscert/ics/monitors/monitors.xml ! "security"
+https://www.cisa.gov/uscert/ncas/tips.xml ! "security"
+https://investors.cyberark.com/rss/pressrelease.aspx ! "security"
+http://feeds.feedburner.com/TheHackersNews?format=xml ! "security"
+
+#
+# SERVER ADMINISTRATION
+#
+https://ubuntu.com/blog/feed ! "serveradministration"
+https://www.kali.org/rss.xml ! "serveradministration"
+https://www.redhat.com/en/rss/blog/channel/cloud-native-computing "~Red Hat Cloud Native Computing Blog" ! "serveradministration"
+https://www.youtube.com/feeds/videos.xml?user=UbuntuOnAir ! "serveradministration"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCKWaEZ-_VweaEx1j62do_vQ "~IBM Technology Youtube" ! "serveradministration"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCp6NUFV9mSEK6RxUiEVymVg "~RedHat YouTube" ! "serveradministration"
+#
+# TERRAFORM
+#
