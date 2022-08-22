@@ -10,5 +10,5 @@ then
     echo ""
     exit
 else
-    newsboat -u urls -c data/main-cache.db -C config
+    newsboat -u urls -c main-cache.db -C config
 fi
