@@ -1,11 +1,9 @@
 ---
 version: "3.5"
-services: # `$ docker compose run --rm newsfeed`
+services:
   newsfeed:
-    image: anthonyrussano/newsfeed:latest
+    image: anthonyrussano/devops-newsfeeds
     volumes:
       - newsfeed:/root/.newsfeed
-    stdin_open: true
-    tty: true
-volumes:
-  newsfeed:
+     ports:
+      - 8080:7681
