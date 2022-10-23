@@ -1,2 +1,0 @@
-#!/bin/bash
-newsboat --url-file=~/.shortcuts/urls --cache-file=~/.shortcuts/main-cache.db --config-file=~/.shortcuts/config

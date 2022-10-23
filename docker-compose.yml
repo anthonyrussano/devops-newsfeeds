@@ -1,9 +1,9 @@
 ---
 version: "3.5"
 services:
-  newsfeed:
+  devops-newsfeed:
     image: anthonyrussano/devops-newsfeeds
     volumes:
-      - newsfeed:/root/.newsfeed
-     ports:
+      - ~/.newsfeed:/root/.newsfeed
+    ports:
       - 8080:7681
