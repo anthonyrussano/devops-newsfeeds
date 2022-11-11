@@ -17,7 +17,7 @@ reload-time 30
 reload-threads 50
 prepopulate-query-feeds yes
 # Open Links in Browser
-browser "xdg-open"
+browser "elinks"
 # Podcast
 podcast-auto-enqueue yes
 download-path "~/Downloads/%h/%n"
