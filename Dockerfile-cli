@@ -2,5 +2,5 @@ FROM alpine:3.16
 WORKDIR /root/.newsboat
 COPY config /root/.newsboat
 COPY urls /root/.newsboat
-RUN apk add newsboat elinks
-ENTRYPOINT ["newsboat"]
+RUN --no-cache util-linux newsboat elinks
+ENTRYPOINT ["newsboat -c=/root/.newsboat/cache/${UUIDFROM}_cache.db"]
