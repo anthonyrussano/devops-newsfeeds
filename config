@@ -24,4 +24,4 @@ download-path "~/Downloads/%h/%n"
 download-filename-format "%F-%t.%e"
 player "play"
 macro 1 set browser play;
-
+cache-file "/root/.newsboat/cache/cache.db"
