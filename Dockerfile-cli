@@ -3,4 +3,4 @@ WORKDIR /root/.newsboat
 COPY config /root/.newsboat
 COPY urls /root/.newsboat
 RUN apk add newsboat elinks
-ENTRYPOINT ["newsboat"]
+ENTRYPOINT ["newsboat -c=/root/.newsboat/cache/$RANDOM_cache.db"]
