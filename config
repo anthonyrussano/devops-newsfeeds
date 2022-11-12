@@ -1,27 +1,15 @@
-# Formatting
 articlelist-format " %t %?T?[%T]? %D"
 feedlist-format "%11u %t"
-podlist-format "[%-5p%%] %-12S %b"
-show-keymap-hint no
-show-title-bar no
-swap-title-and-hints no
+show-keymap-hint yes
+show-title-bar yes
+swap-title-and-hints yes
 datetime-format "%m/%d %I:%M %p"
 highlight articlelist [[] red
 highlight articlelist []] red
-#"%m/%d %I:%M %p"
-# Sorting
 feed-sort-order "title"
-# Auto Reload Settings
 auto-reload yes
 reload-time 30
 reload-threads 50
 prepopulate-query-feeds yes
-# Open Links in Browser
 browser "elinks"
-# Podcast
-podcast-auto-enqueue yes
-download-path "~/Downloads/%h/%n"
-download-filename-format "%F-%t.%e"
-player "play"
-macro 1 set browser play;
-# cache-file "/root/.newsboat/cache/${RANDOM}_cache.db"
+cache-file /root/.newsboat/cache/${RANDOM}_cache.db
