@@ -12,4 +12,4 @@ reload-time 30
 reload-threads 50
 prepopulate-query-feeds yes
 browser "elinks"
-cache-file /root/.newsboat/cache/${RANDOM}_cache.db
+# cache-file /root/.newsboat/cache/${RANDOM}_cache.db
