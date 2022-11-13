@@ -1,5 +1,6 @@
 FROM tsl0922/ttyd:alpine
 WORKDIR /root/.newsboat
+RUN mkdir /root/.newsboat/cache
 COPY config /root/.newsboat
 COPY urls /root/.newsboat
 RUN apk add newsboat elinks
