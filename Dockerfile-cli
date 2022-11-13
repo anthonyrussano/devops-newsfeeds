@@ -1,5 +1,6 @@
 FROM alpine:3.16
 WORKDIR /root/.newsboat
+RUN mkdir /root/.newsboat/cache
 COPY config /root/.newsboat
 COPY urls /root/.newsboat
 RUN apk add newsboat elinks
