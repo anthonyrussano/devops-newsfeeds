@@ -1,9 +1,7 @@
-"query:VIEW ALL:age < \"1000000\""
+"query:ALL:age < \"1000000\""
 "query:Apache:tags # \"apache\""
-"query:Bible Study:tags # \"bible\""
 "query:Big Data:tags # \"bigdata\""
 "query:Books:tags # \"books\""
-"query:Child Development:tags # \"baby\""
 "query:CICD:tags # \"cicd\""
 "query:Clouds:tags # \"clouds\""
 "query:Containers:tags # \"containers\""
@@ -21,17 +19,8 @@
 "query:R Programming:tags # \"rprog\""
 "query:Security:tags # \"security\""
 "query:Server Administration:tags # \"serveradministration\""
-"query:Tech:tags # \"tech\""
 "query:Universities:tags # \"univ\""
 "query:YouTube:tags # \"youtube\""
-#
-# BIBLE
-#
-https://www.youtube.com/feeds/videos.xml?user=RabbiSchneider ! "bible"
-#
-# CHILD DEVELOPMENT
-#
-https://developingminds.net.au/blog?format=RSS ! "baby"
 #
 # FINANCE
 #
@@ -454,7 +443,6 @@ https://insidebigdata.com/feed/ ! "bigdata"
 https://databricks.com/feed ! "bigdata"
 https://aws.amazon.com/blogs/big-data/feed/ ! "bigdata"
 https://analytixon.com/feed/ ! "bigdata"
-
 #
 # BOOKS
 #
