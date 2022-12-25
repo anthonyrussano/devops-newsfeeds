@@ -1,8 +1,8 @@
 articlelist-format " %t %?T?[%T]? %D"
 feedlist-format "%11u %t"
-show-keymap-hint yes
-show-title-bar yes
-swap-title-and-hints yes
+show-keymap-hint no
+show-title-bar no
+swap-title-and-hints no
 datetime-format "%m/%d %I:%M %p"
 highlight articlelist [[] red
 highlight articlelist []] red
@@ -12,4 +12,3 @@ reload-time 30
 reload-threads 50
 prepopulate-query-feeds yes
 browser "elinks"
-# cache-file /root/.newsboat/cache/${RANDOM}_cache.db
