@@ -13,7 +13,7 @@
 "query:Government:tags # \"govt\""
 "query:Hardware:tags # \"hardware\""
 "query:Infrastructure Provisioning:tags # \"infrastructureprovisioning\""
-"query:iot:tags # \"iot\""
+"query:IoT:tags # \"iot\""
 "query:LibGen:tags # \"libgen\""
 "query:News:tags # \"news\""
 "query:Monitoring and Logging:tags # \"monitoringandlogging\""
