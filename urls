@@ -13,6 +13,7 @@
 "query:Infrastructure Provisioning:tags # \"infrastructureprovisioning\""
 "query:IoT:tags # \"iot\""
 "query:LibGen:tags # \"libgen\""
+"query:Natural Healing:tags # \"natural\""
 "query:News:tags # \"news\""
 "query:Monitoring and Logging:tags # \"monitoringandlogging\""
 "query:Python:tags # \"python\""
@@ -21,6 +22,24 @@
 "query:Server Administration:tags # \"serveradministration\""
 "query:Universities:tags # \"univ\""
 "query:YouTube:tags # \"youtube\""
+#
+# NATURAL
+#
+https://www.nature.com/nature.rss ! "natural"
+https://www.nature.com/natcardiovascres.rss ! "natural"
+https://www.nature.com/natsynth.rss ! "natural"
+https://www.nature.com/nmat.rss ! "natural"
+https://www.nature.com/nri.rss ! "natural"
+https://www.nature.com/natfood.rss ! "natural"
+https://www.nature.com/nchembio.rss ! "natural" 
+https://www.nature.com/nrmicro.rss ! "natural"
+https://www.nature.com/nsmb.rss ! "natural"
+https://www.nature.com/nutd.rss ! "natural"
+https://www.nature.com/npjsba.rss ! "natural"
+https://www.nature.com/npjscifood.rss ! "natural"
+https://www.nature.com/npjregenmed.rss ! "natural"
+https://www.nature.com/natsustain.rss ! "natural"
+
 #
 # FINANCE
 #
