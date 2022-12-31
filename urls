@@ -1,5 +1,5 @@
 "query:ALL:age < \"1000000\""
-"query:Apache:tags # \"apache\""
+"query:Apache Foundation:tags # \"apache\""
 "query:Big Data:tags # \"bigdata\""
 "query:Books:tags # \"books\""
 "query:CICD:tags # \"cicd\""
@@ -16,8 +16,10 @@
 "query:Natural Healing:tags # \"natural\""
 "query:News:tags # \"news\""
 "query:Monitoring and Logging:tags # \"monitoringandlogging\""
+"query:Political Commentary:tags # \"pol\""
 "query:Python:tags # \"python\""
 "query:R Programming:tags # \"rprog\""
+"query:San Diego:tags # \"diego\""
 "query:Security:tags # \"security\""
 "query:Server Administration:tags # \"serveradministration\""
 "query:Universities:tags # \"univ\""
@@ -39,6 +41,10 @@ https://www.nature.com/npjsba.rss ! "natural"
 https://www.nature.com/npjscifood.rss ! "natural"
 https://www.nature.com/npjregenmed.rss ! "natural"
 https://www.nature.com/natsustain.rss ! "natural"
+https://feed.podbean.com/thegarynullshow/feed.xml ! "natural"
+https://www.youtube.com/feeds/videos.xml?user=GaryNullTV ! "natural"
+https://www.youtube.com/feeds/videos.xml?user=ScrippsHealth ! "natural"
+https://www.youtube.com/feeds/videos.xml?user=ScrippsResearch ! "natural"
 
 #
 # FINANCE
@@ -56,6 +62,8 @@ https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10064
 https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=21324812 "~CNBC PERSONAL FINANCE" ! "finance"
 https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20409666 "~CNBC MARKET INSIDER" ! "finance"
 https://feed.podbean.com/omfif/feed.xml "~The OMFIF Podcast" ! "finance"
+https://www.youtube.com/feeds/videos.xml?user=marketplacevideos ! "finance"
+
 #
 # GOVT
 #
@@ -113,26 +121,49 @@ https://www.congress.gov/rss/notification.xml ! "govt"
 https://www.loc.gov/rss/teachers/today-in-history/feed.xml ! "govt"
 https://www.federalregister.gov/api/v1/documents.rss ! "govt"
 https://oag.ca.gov/news/feed ! "govt"
-#
-# LIBGEN
-#
-https://libgen.rs/rss/index.php ! "libgen"
+https://www.youtube.com/feeds/videos.xml?user=IdahoDeptofLabor ! "govt"
+https://www.youtube.com/feeds/videos.xml?user=HamiltonCityCouncil ! "govt"
+
 #
 # NEWS
 #
 http://rss.slashdot.org/Slashdot/slashdotMain ! "news"
-https://www.brighteon.com/api-v3/channels/hrreport/rss/rss.xml ! "news"
-https://odysee.com/$/rss/@JordanBPeterson:c ! "news"
-https://feed.podbean.com/thegarynullshow/feed.xml ! "news"
-https://www.youtube.com/feeds/videos.xml?user=GaryNullTV ! "news"
-https://www.youtube.com/feeds/videos.xml?user=laroucheyouth ! "news"
-https://feeds.redcircle.com/1a1849aa-ea7c-430c-8eca-304ef24bd203 "~Jet Blake" ! "news"
-https://twitchrss.appspot.com/vod/roguenewstv ! "news"
 https://www.androidpolice.com/feed/ ! "news"
+
+
+#
+# POLITICAL COMMENTARY
+#
+https://twitchrss.appspot.com/vod/roguenewstv ! "pol"
+https://www.youtube.com/feeds/videos.xml?user=MarkDice ! "pol"
+https://www.youtube.com/feeds/videos.xml?user=FoxNewsChannel ! "pol"
+https://www.youtube.com/feeds/videos.xml?user=PBSfrontline ! "pol"
+https://www.brighteon.com/api-v3/channels/hrreport/rss/rss.xml ! "pol"
+https://www.youtube.com/feeds/videos.xml?user=laroucheyouth ! "news"
+https://feeds.redcircle.com/1a1849aa-ea7c-430c-8eca-304ef24bd203 "~Jet Blake" ! "pol"
+
 #
 # UNIVERSITIES
 #
 https://smhs.gwu.edu/news/rss.xml ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=gardencitycollegeit ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=Harvard ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=imperialcollegevideo ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=libertyuniversity ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=NottmUniversity ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=oxford ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=UnivPennsylvania ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=CogswellCollege ! "univ"
+https://www.youtube.com/feeds/videos.xml?user=universitytoronto ! "univ"
+
+#
+# SAN DIEGO
+#
+https://www.youtube.com/feeds/videos.xml?user=NWSSanDiego ! "diego"
+https://www.youtube.com/feeds/videos.xml?user=KPBSSanDiego ! "diego"
+https://www.youtube.com/feeds/videos.xml?user=KUSITV9 ! "diego"
+https://www.youtube.com/feeds/videos.xml?user=SanDiegoNews8 ! "diego"
+
 #
 # YOUTUBE
 #
@@ -147,7 +178,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCmgWnKIhmOi-MuRUC62mOFw ! "
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrHSYLKqmLunBzlSfunGDSA ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCS2oIpISybXqY0Og9D4-XYw ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-tOxRW6BGC7AohQAY2U5OA ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=SanDiegoNews8 ! "youtube"
+
 https://www.youtube.com/feeds/videos.xml?channel_id=UCy4KTTEsVAm4DMY91uxTiaA ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-WefInHnQJkcxfEYQJHCew ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCdG2yuhbORWAY6q9zWmkbvg ! "youtube"
@@ -155,10 +186,10 @@ https://www.youtube.com/feeds/videos.xml?user=davidnburgess ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=EUROPOLtube ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXuwhn5_41m4VxZJ3wcDyxA ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=firinglinevideos ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=FoxNewsChannel ! "youtube"
+
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8butISFwT-Wl7EV0hUK0BQ ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=PBSfrontline ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=gardencitycollegeit ! "youtube"
+
+
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsd6hP-zzIkCpw8XGw7Osyw ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCgS2qyzQgcZoxoECW0vcRXg ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7DEMh0YqU4NxkV2rK34pmg ! "youtube"
@@ -167,8 +198,8 @@ https://www.youtube.com/feeds/videos.xml?user=GreatPerformancesPBS ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCo-8nxIq-4QGtVzg0gKt4ZA ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCoX9yBVA_OpnxdWR2bZS8qQ ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=adrian192a ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=HamiltonCityCouncil ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=Harvard ! "youtube"
+
+
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-AdvAxaagE9W2f0webyNUQ ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-q5FIFUO-_WosJ4Z6HweiA ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCgqQI1PWvsM2zBWUnIWGmvQ ! "youtube"
@@ -183,8 +214,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCnYcuO2JQhVbnCR8ltmSacQ ! "
 https://www.youtube.com/feeds/videos.xml?user=SmallBizRepublicans ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UChc8bTPtZgTZDDLJ6UWJgxA ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCFNoGF7Ea-FfmAjfK4ReFpA ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=IdahoDeptofLabor ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=imperialcollegevideo ! "youtube"
+
+
 https://www.youtube.com/feeds/videos.xml?channel_id=UChgWflMjdgpT-qPblhIymyQ ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC0rA28YVpD3WHMOM2BG6urg ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=ircuk97 ! "youtube"
@@ -200,12 +231,10 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCU7vNA0YJ5syI1F6NfRB2kQ ! "
 https://www.youtube.com/feeds/videos.xml?channel_id=UCuKp3KQyEGV7dmAL6iEXgrg ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=kingscollegelondon ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC0xIV_cFUMBxjaoBWwGNzAQ ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=KPBSSanDiego ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=KUSITV9 ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=LSACvideos ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwIHX2_4P1mcGU5T6-6Byjg ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2mMeOp9vOg4w1FjnGvSKUw ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=libertyuniversity ! "youtube"
+
 https://www.youtube.com/feeds/videos.xml?user=LinusTechTips ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=LondonBusinessSchool ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCJg-XMBTNvodST9mV3TdDQA ! "youtube"
@@ -213,9 +242,8 @@ https://www.youtube.com/feeds/videos.xml?user=LosAngelesCountyFD ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=LACountySheriff ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=lsewebsite ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=TheMarinWaldorf ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=MarkDice ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCyGYUrC2IvaHWoX6dwEsrMA ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=marketplacevideos ! "youtube"
+
 https://www.youtube.com/feeds/videos.xml?user=JamieMC1978 ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=MITNewsOffice ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UClZm8v9mYvhFLg1_oJPQLTg ! "youtube"
@@ -247,7 +275,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCurvEHnuVpW_4wUgg6jqZOw ! "
 https://www.youtube.com/feeds/videos.xml?user=NCSSMDistanceEd ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=ncweekend ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=NOVAonline ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=NWSSanDiego ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCJ3ufsJYLztQA9JYfINcJ2w ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCADnh3VJByvXV-FPvP8yIug ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCBYbGpgjIoXKHwr4hYUU10g ! "youtube"
@@ -325,9 +352,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC3pJp3b9sGEAWDVrPrHEhFw ! "
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtkpxj88ACVmV_6Vs0OpYvg ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=SDMesaCollegeMusic ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCk85otLk-ASsqPu0aXFGjzA ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=ScrippsHealth ! "youtube"
+
 https://www.youtube.com/feeds/videos.xml?user=scrippsoceanography ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=ScrippsResearch ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCE-bw6PRKuDlH6fP1mP4nOw ! "youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCcxXj4QG3vZ9MZhh6EUUSSw ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=SenatorCardin ! "youtube"
@@ -402,11 +428,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCiq_Kg0zEPrjMFK_s-KP5_g ! "
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkhT0OvwPHFaX-d0ZEFup0g ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=UChicagoLawSchool ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=videouel ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=NottmUniversity ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=oxford ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=UnivPennsylvania ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=CogswellCollege ! "youtube"
-https://www.youtube.com/feeds/videos.xml?user=universitytoronto ! "youtube"
+
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2HmgeO1Q5_kos5vbb-uULQ ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=USAOsdca ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=USC ! "youtube"
@@ -447,7 +469,7 @@ https://www.youtube.com/feeds/videos.xml?user=YaleUniversity ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=NRNUMEPhI ! "youtube"
 https://www.youtube.com/feeds/videos.xml?user=ustchannel ! "youtube"
 #
-# APACHE
+# APACHE FOUNDATION
 #
 https://airflow.apache.org/blog/index.xml ! "apache"
 https://feeds.buzzsprout.com/186154.rss "~Confluent Apache Kafka Podcast" ! "apache"
@@ -468,13 +490,14 @@ https://analytixon.com/feed/ ! "bigdata"
 https://feeds.feedburner.com/oreilly/radar/atom ! "books"
 https://feeds.feedburner.com/oreilly/newbooks ! "books"
 https://feeds.feedburner.com/oreilly/all ! "books"
+https://libgen.rs/rss/index.php ! "libgen"
 #
 # CICD
 #
 https://about.gitlab.com/atom.xml ! "cicd"
 https://github.blog/feed/ ! "cicd"
 #
-# CLOUDS
+# CLOUD PROVIDERS
 #
 https://www.youtube.com/feeds/videos.xml?channel_id=UCDQ9L4eFHxSh0BM6z-SkZMw "~Ned in the Cloud" ! "clouds"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCGWZY-0pONnKmF98dhZy9CQ "~Stephane Maarek YouTube" ! "clouds"
