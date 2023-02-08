@@ -4,7 +4,7 @@ RUN mkdir /root/.newsboat/cache
 COPY config /root/.newsboat
 COPY urls /root/.newsboat
 RUN apk add newsboat elinks
-RUN useradd worker
+RUN adduser worker
 RUN chown worker:worker /root/.newsboat
 USER worker
 ENTRYPOINT ["/sbin/tini", "--"]
