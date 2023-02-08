@@ -1,11 +1,11 @@
 FROM tsl0922/ttyd:alpine
-WORKDIR /root/.newsboat
-RUN mkdir /root/.newsboat/cache
-COPY config /root/.newsboat
-COPY urls /root/.newsboat
+WORKDIR /home/worker/.newsboat
+RUN mkdir /home/worker/.newsboat/cache
+COPY config /home/worker/.newsboat
+COPY urls /home/worker/.newsboat
 RUN apk add newsboat elinks
 RUN adduser -D worker
-RUN chown worker:worker /root/.newsboat
+RUN chown worker:worker /home/worker/.newsboat
 USER worker
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["ttyd", "-a", "newsboat"]
