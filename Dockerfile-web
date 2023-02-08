@@ -5,7 +5,7 @@ COPY config /home/worker/.newsboat
 COPY urls /home/worker/.newsboat
 RUN apk add newsboat elinks
 RUN adduser -D worker
-RUN chown worker:worker /home/worker/.newsboat
+RUN chown -R worker:worker /home/worker/.newsboat
 USER worker
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["ttyd", "-a", "newsboat"]
