@@ -65,9 +65,6 @@ https://github.blog/feed/ ! "cicd"
 # CLOUD PROVIDERS
 #
 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCDQ9L4eFHxSh0BM6z-SkZMw "~Ned in the Cloud" ! "clouds"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCGWZY-0pONnKmF98dhZy9CQ "~Stephane Maarek YouTube" ! "clouds"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCJS9pqu9BzkAMNTmzNMNhvg "~Google Cloud Tech YouTube" ! "clouds"
 https://aws.amazon.com/blogs/devops/feed/ ! "clouds"
 https://blog.cloudflare.com/rss/ ! "clouds"
 https://www.youtube.com/feeds/videos.xml?user=AWSwebinars ! "clouds"
@@ -120,6 +117,10 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCcuy916j4jPX-W-bhjXh_cg "~A
 https://www.youtube.com/feeds/videos.xml?channel_id=UCdngmbVKX1Tgre699-XLlUA "~TechWorld with Nana" ! "devlearn"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCFe9-V_rN9nLqVNiI8Yof3w "~That DevOps Guy" ! "devlearn"
 https://dev.to/feed/ ! "devlearn"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDQ9L4eFHxSh0BM6z-SkZMw "~Ned in the Cloud" ! "devlearn"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCGWZY-0pONnKmF98dhZy9CQ "~Stephane Maarek YouTube" ! "devlearn"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJS9pqu9BzkAMNTmzNMNhvg "~Google Cloud Tech YouTube" ! "devlearn"
+
 
 #
 # Dev News
@@ -397,3 +398,7 @@ https://www.youtube.com/feeds/videos.xml?user=RiceUniversity ! "univ"
 https://www.youtube.com/feeds/videos.xml?user=mcgilluniversity ! "univ"
 https://www.youtube.com/feeds/videos.xml?user=MITNewsOffice ! "univ"
 https://www.youtube.com/feeds/videos.xml?user=NOVAonline ! "univ"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCy1xyOl5MEuzfZhcPIg8DsQ ! "univ"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0BLvoH8-8_1e43cWQOwjMA ! "univ"
+https://www.youtube.com/feeds/videos.xml?channel_id=UChUrzGQzRqVxhKAV9n9nIPA ! "univ"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCY85wHK1Z3LJyKB7XQ-pJ0g ! "univ"
