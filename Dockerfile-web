@@ -7,10 +7,6 @@ RUN apk add newsboat elinks
 RUN adduser -D worker
 RUN chown -R worker:worker /home/worker/.newsboat
 USER worker
-
-# Copy a script to handle unique cache directories
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["/entrypoint.sh"]
