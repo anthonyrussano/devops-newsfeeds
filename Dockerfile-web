@@ -7,6 +7,5 @@ RUN apk add newsboat elinks
 RUN adduser -D worker
 RUN chown -R worker:worker /home/worker/.newsboat
 USER worker
-COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["/entrypoint.sh"]
+CMD ["ttyd", "-W", "-a", "newsboat"]
