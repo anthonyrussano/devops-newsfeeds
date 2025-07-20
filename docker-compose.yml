@@ -2,8 +2,8 @@
 version: "3.5"
 services:
   devops-newsfeed:
-    image: anthonyrussano/devops-newsfeeds
+    image: anthonyrussano/devops-newsfeeds:web
     volumes:
-      - ~/.newsfeed:/root/.newsfeed
+      - ~/.newsboat:/home/worker/.newsboat
     ports:
-      - 8080:7681
+      - "8080:7681"
