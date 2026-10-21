@@ -23,6 +23,7 @@ and authentication work without being necessary for these uses.
 | Feed cache | Every build downloaded everything; failed feeds disappeared | Conditional HTTP requests, cached parsed articles, stale fallback, offline mode, status report |
 | Static rendering | Unescaped text/URLs and title-based filenames allowed unsafe content and collisions | Autoescaped templates, HTTP(S)-only links, URL-hash filenames |
 | Static usability | Unstyled list of feed links | Responsive light/dark layouts, search, category filtering, latest stories, source pages |
+| Static hosting | Workflow only produced a downloadable site artifact | GitHub Pages deployment after main pushes, daily at 06:23 UTC, and on manual request |
 | Collection curation | Opaque URLs and no source-review workflow | Local feed-review dashboard with publisher metadata, status history, article samples, categories, saved decisions, diff preview, backups, and CSV export |
 | CI | Old actions, retired `set-output`, and CLI/web commit-tag collisions | Current action majors, `GITHUB_OUTPUT`, separate variant commit tags, checks before publishing |
 | Validation | No automated tests | Python regression tests, live browser smoke test, CI container checks, dependency updates |
@@ -66,7 +67,8 @@ covers amd64. The publication workflow builds amd64/arm64 after CI passes; arm64
 was not built locally. For subsequent checks and container publication, see the
 [Checks workflow](https://github.com/anthonyrussano/devops-newsfeeds/actions/workflows/ci.yml).
 The [static-site workflow](https://github.com/anthonyrussano/devops-newsfeeds/actions/workflows/static-site.yml)
-creates downloadable artifacts; website hosting is separate.
+now deploys the snapshot to
+[GitHub Pages](https://anthonyrussano.github.io/devops-newsfeeds/).
 
 ## Feed collection check
 
@@ -120,24 +122,30 @@ and a CNBC feed labeled both EARNINGS and BUSINESS. The static generator merges
 duplicates and uses the last explicit title override. CNBC's labels should be
 reviewed against its current feed categories before choosing a replacement URL.
 
+The first [GitHub-hosted build](https://github.com/anthonyrussano/devops-newsfeeds/actions/runs/39551952542)
+on 2026-10-20 (PDT) refreshed 151 sources and recorded 273 failures, including 238 YouTube
+URLs. Responses included HTTP 404, 500, 403, and non-feed content, plus network/TLS
+errors. These results differ substantially from the local scan. Hosting on Pages
+does not change runner access to feed publishers. The public snapshot exposes
+these failures and its generated `report.json`; use the local dashboard and
+repeat checks before deciding to retire a source. The build cache retains usable
+articles if a previously successful source later fails.
+
 ## Suggested next work
 
 1. **Curate sources using repeated observations.** Check the failing URLs on a
    second network, discover replacements from publishers' own RSS links, and
    explicitly retire confirmed discontinued feeds. Keep uncertain sources until
    their failures can be distinguished from access/network restrictions.
-2. **Choose the static publishing destination and cadence.** The manual workflow
-   already builds a downloadable artifact. A daily GitHub Pages deployment is a
-   small next step once the destination and public feed selection are decided.
-3. **Choose web-state expectations.** Sessions are intentionally temporary. If
+2. **Choose web-state expectations.** Sessions are intentionally temporary. If
    persistent per-user read state is needed, put authentication in front and map
    verified identities to server-selected cache locations; do not re-enable
    client-supplied Newsboat command arguments.
-4. **Consider a focused default collection.** University/YouTube sources account
+3. **Consider a focused default collection.** University/YouTube sources account
    for much of this collection. A smaller DevOps subset would make initial web
    sessions faster. Preserve the full collection as an alternate input and retain
    the existing query groups for the CLI workflow.
-5. **Improve collection portability.** Native `--export-to-opml2` already provides
+4. **Improve collection portability.** Native `--export-to-opml2` already provides
    tagged OPML export. A future importer could make subscriptions easier to move
    between readers while preserving the Newsboat query groups separately.
 
