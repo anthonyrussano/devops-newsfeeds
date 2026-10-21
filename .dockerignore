@@ -1,0 +1,11 @@
+.git
+.venv
+.cache
+.pytest_cache
+.ruff_cache
+__pycache__
+site
+tests
+certs/*
+!certs/*.crt
+!certs/README.md

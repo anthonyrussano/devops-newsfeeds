@@ -1,0 +1,29 @@
+[project]
+name = "devops-newsfeeds"
+version = "0.2.0"
+description = "Browse a shared Newsboat feed collection in the terminal, browser, or a static site."
+requires-python = ">=3.12"
+dependencies = [
+    "feedparser>=6.0.12,<7",
+    "httpx>=0.28.1,<1",
+    "jinja2>=3.1.6,<4",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.4,<10", "ruff>=0.12,<1"]
+browser = ["playwright>=1.58,<2"]
+
+[tool.uv]
+package = false
+system-certs = true
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

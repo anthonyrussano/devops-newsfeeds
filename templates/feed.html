@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ feed.title }} · DevOps Newsfeeds{% endblock %}
+{% block content %}
+<section class="intro compact">
+  <p class="eyebrow"><a href="index.html">← ALL SOURCES</a></p>
+  <h1>{{ feed.title }}</h1>
+  <p class="tags">{{ feed.tags|join(' / ') }}</p>
+  <p><a href="{{ feed.url }}" rel="noopener noreferrer">Original feed ↗</a></p>
+  <p class="muted">Status: {{ feed.status }}{% if feed.fetched_at %} · Last fetched {{ feed.fetched_at }}{% endif %}</p>
+  {% if feed.error %}<p class="notice">{{ feed.error }}{% if feed.status == 'stale' %} Showing saved articles from the last successful fetch.{% endif %}</p>{% endif %}
+</section>
+<div class="stories">{% for article in feed.articles %}
+  <article class="story"><time class="muted">{{ article.published }}</time><h2>{% if article.link %}<a href="{{ article.link }}" rel="noopener noreferrer">{{ article.title }}</a>{% else %}{{ article.title }}{% endif %}</h2></article>
+{% else %}<p>No articles available for this source.</p>{% endfor %}</div>
+{% endblock %}

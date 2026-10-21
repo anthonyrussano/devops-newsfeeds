@@ -1,7 +1,13 @@
-FROM alpine:3.16
-WORKDIR /root/.newsboat
-RUN mkdir /root/.newsboat/cache
-COPY config /root/.newsboat
-COPY urls /root/.newsboat
-RUN apk add newsboat elinks
-ENTRYPOINT ["newsboat"]
+FROM alpine:3.24
+COPY certs/ /usr/local/share/ca-certificates/
+COPY scripts/install-packages.sh /usr/local/bin/install-packages
+RUN sh /usr/local/bin/install-packages \
+    && adduser -D -u 1000 worker \
+    && mkdir -p /home/worker/.newsboat/cache \
+    && chown -R worker:worker /home/worker/.newsboat
+COPY config urls /etc/newsboat/
+COPY --chmod=755 scripts/newsboat-cli.sh /usr/local/bin/newsboat-cli
+ENV TERM=xterm-256color
+USER worker
+WORKDIR /home/worker
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/newsboat-cli"]

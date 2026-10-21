@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{% block title %}DevOps Newsfeeds{% endblock %}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="search.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header><a class="brand" href="index.html">◈ DevOps Newsfeeds</a><span class="edition">An independent feed reader</span></header>
+  <main id="content">{% block content %}{% endblock %}</main>
+  <footer>Built {{ generated }} · <a href="report.json">Feed status report</a> · Powered by RSS &amp; Atom</footer>
+</body>
+</html>
