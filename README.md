@@ -174,6 +174,15 @@ for writes. It serves only the review UI and its APIs, not repository files.
 
 ## Static site
 
+Read the published snapshot at
+[DevOps Newsfeeds](https://anthonyrussano.github.io/devops-newsfeeds/).
+GitHub Pages refreshes after pushes to `main`, daily at 06:23 UTC, or when
+**Publish static site** is run manually in Actions. Scheduled runs can be delayed
+by GitHub. The home page shows when the snapshot was generated and how many feeds
+refreshed, used cached content, or failed; individual source pages explain failures.
+The full machine-readable results are available in
+[`report.json`](https://anthonyrussano.github.io/devops-newsfeeds/report.json).
+
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (0.11 or newer),
 then build a small preview:
 
@@ -284,11 +293,25 @@ The publishing workflow builds both Linux amd64 and arm64 images after checks pa
 
 See [Checks](https://github.com/anthonyrussano/devops-newsfeeds/actions/workflows/ci.yml)
 for test and container-publication results, and
-[Build static site](https://github.com/anthonyrussano/devops-newsfeeds/actions/workflows/static-site.yml)
-for downloadable site artifacts.
+[Publish static site](https://github.com/anthonyrussano/devops-newsfeeds/actions/workflows/static-site.yml)
+for GitHub Pages deployment results.
 
-The manual **Build static site** workflow fetches feeds, restores the previous
-feed cache, and uploads a `static-site` artifact. It does not deploy a website.
+The **Publish static site** workflow restores the previous feed cache, fetches the
+collection, and deploys `site/` to GitHub Pages. Its `github-pages` artifact is the
+transfer between build and deployment; readers use the public site URL. Deployment
+is restricted to `main`. To enable this in a fork, choose **Settings → Pages →
+Build and deployment → Source → GitHub Actions**, then run the workflow on `main`.
+The deploy job requires `pages: write` and `id-token: write` and uses the
+`github-pages` environment.
+
+Feed availability depends on the network doing the fetch. GitHub-hosted runners
+can fail on feeds that work locally, especially YouTube sources. Partial builds
+publish with visible status counts; cached articles survive failed refreshes.
+If every source fails and no cached feed is available, the build fails and the
+previous deployment stays live. Local builds can use your system/corporate trust
+configuration and may have better coverage. Neither workflow publishes corporate
+CA files or the local curation dashboard.
+
 Dependabot checks Python, Docker, and GitHub Actions dependencies weekly.
 
 See [the maintenance review](docs/maintenance-review.md) for findings, validation,
