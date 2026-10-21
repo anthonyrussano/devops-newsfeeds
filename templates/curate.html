@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review feeds · DevOps Newsfeeds</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="curate.css">
+  <script src="curate.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="/">◈ Feed review</a><span class="edition">DevOps Newsfeeds</span></header>
+<main>
+  <div class="review-intro"><div><h1>Know your sources.</h1><p class="description">Identify each feed, check its health, and decide what belongs in your reader.</p></div>
+    <div class="toolbar"><button id="add-feed" class="primary" disabled>Add feed</button><button id="next-review">Next unreviewed</button><button id="check-all">Check all feeds</button><button id="export-catalog">Export catalog CSV</button><button id="export">Export decisions</button><button id="preview" class="primary">Preview urls changes</button></div>
+  </div>
+  <p id="summary" class="stats" aria-live="polite">Loading collection…</p>
+  <p id="message" role="status"></p>
+  <div class="review-filters">
+    <div><label for="review-search">Find a source</label><input id="review-search" type="search" placeholder="Name, publisher, URL, description…"></div>
+    <div><label for="health">Health</label><select id="health"><option value="">All health states</option><option value="healthy">Fetch succeeded</option><option value="failed">Fetch failed</option><option value="unchecked">Needs a live check</option><option value="unidentified">Feed title unknown</option><option value="duplicate">Repeated URL</option></select></div>
+    <div><label for="review-category">Category</label><select id="review-category"><option value="">All categories</option><option value="__none__">Uncategorized</option></select></div>
+    <div><label for="decision-filter">Decision</label><select id="decision-filter"><option value="">All decisions</option><option value="unreviewed">Unreviewed</option><option value="keep">Keep</option><option value="investigate">Investigate</option><option value="retire">Retire</option></select></div>
+    <div><label for="activity">Activity</label><select id="activity"><option value="">Any publication date</option><option value="recent">Published in last 30 days</option><option value="quiet">No article in 180+ days</option><option value="unknown">Publication date unknown</option></select></div>
+  </div>
+  <div class="review-layout">
+    <section aria-label="Sources"><p id="shown" class="muted" aria-live="polite"></p><div id="source-list" class="source-list"></div></section>
+    <section id="detail" class="review-detail" aria-label="Selected source"><p>Select a source to review it.</p></section>
+  </div>
+  <dialog id="plan-dialog" aria-labelledby="plan-title">
+    <h2 id="plan-title">Review the proposed urls changes</h2><p>Only Keep and Retire decisions are applied. Existing query groups, comments, and undecided sources remain in place. New categories get query groups. Retired URLs are commented out. A backup is saved before writing.</p>
+    <pre id="plan-diff"></pre><div class="toolbar"><button id="close-plan">Close</button><button id="apply-plan" class="primary">Apply this preview to urls</button></div>
+  </dialog>
+  <dialog id="add-dialog" aria-labelledby="add-title">
+    <div class="toolbar"><h2 id="add-title">Add a feed</h2><button id="add-close">Close</button></div>
+    <p>Check an RSS or Atom URL, choose its name and categories, then preview the addition before saving.</p>
+    <form id="add-check-form">
+      <label for="add-url">Feed URL</label>
+      <div class="add-url-row"><input id="add-url" type="url" required maxlength="4096" placeholder="https://example.com/feed.xml"><button id="add-check" type="submit">Check feed</button></div>
+    </form>
+    <p id="add-message" role="status"></p>
+    <button id="add-open-existing" hidden>Open existing feed</button>
+    <div id="add-result" hidden>
+      <div id="add-identity"></div>
+      <div class="edit-grid">
+        <div><label for="add-name">Display name</label><input id="add-name" maxlength="500"></div>
+        <div><label for="add-tags">Categories (comma separated)</label><input id="add-tags" list="add-tag-options" placeholder="clouds, containers"><datalist id="add-tag-options"></datalist></div>
+      </div>
+      <label for="add-notes">Notes (optional)</label><textarea id="add-notes" maxlength="4000"></textarea>
+      <p class="muted">New categories get Newsboat query groups. A backup is saved before writing to urls.</p>
+      <div class="toolbar"><button id="add-preview">Preview addition</button><button id="add-save" class="primary" disabled>Save feed to urls</button></div>
+      <pre id="add-diff" hidden></pre>
+    </div>
+  </dialog>
+</main>
+<footer>Check results describe this machine’s network access. A failure does not establish that a publisher has stopped publishing. Review decisions are saved locally.</footer>
+</body>
+</html>

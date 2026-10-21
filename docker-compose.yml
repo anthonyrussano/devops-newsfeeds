@@ -1,9 +1,16 @@
----
-version: "3.5"
 services:
   devops-newsfeed:
-    image: anthonyrussano/devops-newsfeeds:web
-    volumes:
-      - ~/.newsboat:/home/worker/.newsboat
+    build:
+      context: .
+      dockerfile: Dockerfile-web
+    image: devops-newsfeeds:web
     ports:
-      - "8080:7681"
+      - "127.0.0.1:8080:7681"
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=256m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped

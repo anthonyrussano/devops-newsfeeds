@@ -1,11 +1,15 @@
-FROM tsl0922/ttyd:alpine
-WORKDIR /home/worker/.newsboat
-RUN mkdir /home/worker/.newsboat/cache
-COPY config /home/worker/.newsboat
-COPY urls /home/worker/.newsboat
-RUN apk add newsboat elinks
-RUN adduser -D worker
-RUN chown -R worker:worker /home/worker/.newsboat
+FROM alpine:3.24
+COPY certs/ /usr/local/share/ca-certificates/
+COPY scripts/install-packages.sh /usr/local/bin/install-packages
+RUN sh /usr/local/bin/install-packages ttyd \
+    && adduser -D -u 1000 worker
+COPY config urls /etc/newsboat/
+COPY --chmod=755 scripts/newsboat-session.sh /usr/local/bin/newsboat-session
+COPY --chmod=755 entrypoint.sh /usr/local/bin/web-entrypoint
+ENV TERM=xterm-256color
 USER worker
+WORKDIR /home/worker
+EXPOSE 7681
+HEALTHCHECK --interval=30s --timeout=5s CMD wget -q -O /dev/null http://127.0.0.1:7681/ || exit 1
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["ttyd", "-W", "-a", "newsboat"]
+CMD ["/usr/local/bin/web-entrypoint"]

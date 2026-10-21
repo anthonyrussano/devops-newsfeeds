@@ -1,0 +1,52 @@
+header, main, footer { max-width: 1560px; }
+.review-intro { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 20px; }
+.review-intro h1 { font-size: clamp(30px, 4vw, 46px); margin-bottom: 12px; }
+.review-intro .description { font-size: 16px; margin-top: 0; }
+.toolbar { display: flex; gap: 8px; flex-wrap: wrap; }
+button { padding: 10px 14px; font: inherit; font-size: 14px; cursor: pointer; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 6px; }
+button:hover { border-color: var(--accent); }
+button:disabled { opacity: .55; cursor: wait; }
+.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 650; }
+.review-filters { display: grid; grid-template-columns: 2fr repeat(4, 1fr); gap: 12px; margin-top: 24px; }
+.review-filters input, .review-filters select { padding: 10px; font-size: 14px; }
+.review-layout { display: grid; grid-template-columns: minmax(250px, .85fr) minmax(0, 1.6fr); gap: 28px; margin-top: 16px; align-items: start; }
+.source-list { max-height: 77vh; overflow: auto; padding: 4px; }
+.source-choice { width: 100%; display: block; text-align: left; padding: 15px; border-radius: 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; overflow-wrap: anywhere; }
+.source-choice[aria-pressed=true] { background: var(--surface); border-left: 3px solid var(--accent); }
+.source-choice strong, .source-choice small { display: block; }
+.source-choice small { font-size: 12px; color: var(--muted); margin-top: 5px; }
+.badge { display: inline-block; font-size: 12px; padding: 2px 7px; border: 1px solid var(--line); border-radius: 4px; margin: 6px 5px 0 0; }
+.badge.failed { color: #b23c2f; border-color: #b23c2f; }
+.badge.healthy { color: var(--accent); }
+.review-detail { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 24px; overflow-wrap: anywhere; margin-top: 42px; }
+.review-detail h2 { margin-top: 0; font-size: 28px; }
+.review-detail h3 { margin: 24px 0 10px; font-size: 17px; }
+.review-detail p { margin: 10px 0; }
+.review-detail .feed-url { font-size: 13px; }
+.facts { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 5px 12px; font-size: 13px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+.review-detail ul { padding-left: 20px; font-size: 14px; }
+.review-detail li { margin: 9px 0; }
+.edit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+textarea { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 10px; min-height: 80px; resize: vertical; }
+.review-detail label { margin: 14px 0 6px; }
+.review-detail .toolbar { margin-top: 16px; }
+#message { min-height: 1.5em; font-size: 14px; color: var(--accent); }
+#message.error { color: #b23c2f; }
+dialog { max-width: 1000px; width: calc(100% - 32px); color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; }
+dialog::backdrop { background: #0008; }
+pre { font-size: 12px; background: var(--bg); padding: 16px; max-height: 55vh; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+.add-url-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+#add-dialog { overflow-wrap: anywhere; }
+#add-dialog > .toolbar { align-items: center; justify-content: space-between; }
+#add-dialog label { margin: 14px 0 6px; }
+#add-dialog .toolbar { margin-top: 16px; }
+#add-message { color: var(--accent); }
+#add-message.error { color: #b23c2f; }
+#add-identity { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 12px; }
+#add-identity ul { font-size: 14px; padding-left: 20px; }
+@media (max-width: 600px) { .add-url-row { grid-template-columns: 1fr; } }
+@media (prefers-color-scheme: dark) { .badge.failed, #message.error, #add-message.error { color: #ffa292; } }
+@media (max-width: 1000px) { .review-intro { display: block; } .review-filters { grid-template-columns: 2fr 1fr 1fr; } }
+@media (max-width: 700px) { .review-filters { grid-template-columns: 1fr 1fr; } .review-filters > :first-child { grid-column: 1 / -1; } .review-layout { grid-template-columns: 1fr; gap: 8px; } .source-list { max-height: 300px; } .review-detail { margin-top: 12px; padding: 18px; } .edit-grid { grid-template-columns: 1fr; } .facts { grid-template-columns: 110px minmax(0, 1fr); } }

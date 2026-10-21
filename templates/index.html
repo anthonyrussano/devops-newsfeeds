@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="intro">
+  <p class="eyebrow">YOUR READING DESK</p>
+  <h1>Keep a finger on<br>what’s happening.</h1>
+  <p class="description">Engineering, infrastructure, and everything in between. Browse your sources or catch up on the latest stories.</p>
+  <p class="stats">{{ feeds|length }} sources · {{ counts.ok + counts.unchanged }} refreshed · {{ counts.cached }} cached · {{ counts.stale }} stale · {{ counts.failed }} unavailable</p>
+</section>
+<section class="reader" aria-label="Feed browser">
+  <div class="controls">
+    <div><label for="search">Search stories and sources</label><input id="search" type="search" placeholder="Try Kubernetes, Python, security…"></div>
+    <div><label for="category">Category</label><select id="category"><option value="">All categories</option>{% for tag in tags %}<option value="{{ tag }}">{{ tag }}</option>{% endfor %}</select></div>
+  </div>
+  <p id="result-count" class="muted" aria-live="polite"></p>
+  <noscript><p>All stories and sources are shown. Enable JavaScript for search and category filters.</p></noscript>
+  <details class="sources" open><summary>Sources <span>{{ feeds|length }}</span></summary>
+    <div class="feed-grid">{% for feed in feeds %}
+      <a class="feed-card filterable" href="{{ feed.slug }}.html" data-tags="{{ feed.tags|tojson|forceescape }}" data-search="{{ feed.title }} {{ feed.url }} {{ feed.tags|join(' ') }}">
+        <strong>{{ feed.title }}</strong><span class="muted">{{ feed.articles|length }} stories · {{ feed.status }}</span><span class="tags">{{ feed.tags|join(' / ') }}</span>
+      </a>
+    {% endfor %}</div>
+  </details>
+  <h2>Latest stories <span class="muted">{{ latest|length }}</span></h2>
+  <div class="stories">{% for article in latest %}
+    <article class="story filterable" data-tags="{{ article.feed.tags|tojson|forceescape }}" data-search="{{ article.title }} {{ article.feed.title }} {{ article.feed.tags|join(' ') }}">
+      <div class="story-meta"><a href="{{ article.feed.slug }}.html">{{ article.feed.title }}</a>{% if article.published %}<time>{{ article.published }}</time>{% endif %}{% if article.feed.status == 'stale' %}<span>Cached · source unavailable</span>{% endif %}</div>
+      <h3>{% if article.link %}<a href="{{ article.link }}" rel="noopener noreferrer">{{ article.title }}</a>{% else %}{{ article.title }}{% endif %}</h3>
+    </article>
+  {% endfor %}</div>
+</section>
+{% endblock %}
